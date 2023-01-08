@@ -11,17 +11,20 @@ public class DisplayManger {
 
 	public static void createDisplay(){
 
+		// add come settings to OopenGL as attributes of the display manager such as version, wether or not it's compatable with future versions
+		// and the fact it uses the core profile instead of compatability
 		ContextAttribs attribs = new ContextAttribs(3, 2).withForwardCompatible(true).withProfileCore(true);
 
+		// try to create a display, and if you cant, throw an error
 		try {
-			Display.setDisplayMode(new DisplayMode(WIDTH, HEIGHT));
-			Display.create(new PixelFormat(),attribs);
-			Display.setTitle("yeah");
+			Display.setDisplayMode(new DisplayMode(WIDTH, HEIGHT));// make the display
+			Display.create(new PixelFormat(),attribs);// create the display with our new settings
+			Display.setTitle("yeah");// set the title to something very important
 		} catch (LWJGLException e) {
 			throw new RuntimeException(e);
 		}
 
-		GL11.glViewport(0,0,WIDTH,HEIGHT);
+		GL11.glViewport(0,0,WIDTH,HEIGHT);// tell opengl to use our display
 	}
 
 	public static void updateDisplay(){
