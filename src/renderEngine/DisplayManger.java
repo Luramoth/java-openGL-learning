@@ -26,5 +26,8 @@ public class DisplayManger {
 
 	public static void updateDisplay(){}
 
-	public static void closeDisplay(){}
+	public static void closeDisplay(){
+
+		Display.destroy();
+	}
 }
