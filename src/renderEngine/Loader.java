@@ -7,8 +7,12 @@ import org.lwjgl.opengl.GL20;
 import org.lwjgl.opengl.GL30;
 
 import java.nio.FloatBuffer;
+import java.nio.IntBuffer;
 import java.util.ArrayList;
 import java.util.List;
+
+// a bit of explanation so that I remember, a VAO is a list of VBO's and a VBO is a list of data that defines a model
+//an indices, or index buffer, is a buffer full of ints to specify which vertices connect to which vertices in a VBO
 
 public class Loader {
 
@@ -18,11 +22,12 @@ public class Loader {
 
 
 	// make a new vao for a 3d model
-	public RawModel loadToVAO(float[] positions){
+	public RawModel loadToVAO(float[] positions, int[] incises){
 		int vaoID = createVAO();// create the VAO and bind it
+		bindIndicesBuffer(incises);
 		storeDataInAttributeList(0, positions);// store the data inside the VAO
 		unbindVAO();// unbind it, we are done with the VAO
-		return new RawModel(vaoID, positions.length/3);// make the new RawModel using our brand new VAO
+		return new RawModel(vaoID, incises.length);// make the new RawModel using our brand new VAO
 	}
 
 	// loop through the vao's and vbo's and delete them
@@ -59,6 +64,23 @@ public class Loader {
 	// unbind the VAO when it's not needed anymore
 	private void unbindVAO(){
 		GL30.glBindVertexArray(0);
+	}
+
+
+	private void bindIndicesBuffer(int[] indices){
+		int vboID = GL15.glGenBuffers();// make vbo
+		vbos.add(vboID);// put it in the list
+
+		GL15.glBindBuffer(GL15.GL_ELEMENT_ARRAY_BUFFER,vboID);// tell openGL to use this as the indices array
+		IntBuffer buffer = storeDataInIntBuffer(indices);
+		GL15.glBufferData(GL15.GL_ELEMENT_ARRAY_BUFFER, buffer, GL15.GL_STATIC_DRAW);
+	}
+
+	private IntBuffer storeDataInIntBuffer(int[] data){
+		IntBuffer buffer = BufferUtils.createIntBuffer(data.length);
+		buffer.put(data);
+		buffer.flip();
+		return buffer;
 	}
 
 	// put the data in a FloatBuffer, so it can be later read  and used in the VBO
