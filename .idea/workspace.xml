@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9517b87e-bcaf-42e3-8713-9a96771c58f1" name="Changes" comment="destroy display">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/lwjgl.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/lwjgl.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screaming-internally.iml" beforeDir="false" afterPath="$PROJECT_DIR$/screaming-internally.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+    <list default="true" id="9517b87e-bcaf-42e3-8713-9a96771c58f1" name="Changes" comment="open a dang window">
       <change beforePath="$PROJECT_DIR$/src/renderEngine/DisplayManger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderEngine/DisplayManger.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -85,7 +80,21 @@
       <option name="project" value="LOCAL" />
       <updated>1673150445323</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add native libraries">
+      <created>1673151611306</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1673151611306</updated>
+    </task>
+    <task id="LOCAL-00006" summary="open a dang window">
+      <created>1673151680739</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1673151680739</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -104,6 +113,8 @@
     <MESSAGE value="add lwjgl files" />
     <MESSAGE value="initialise display" />
     <MESSAGE value="destroy display" />
-    <option name="LAST_COMMIT_MESSAGE" value="destroy display" />
+    <MESSAGE value="add native libraries" />
+    <MESSAGE value="open a dang window" />
+    <option name="LAST_COMMIT_MESSAGE" value="open a dang window" />
   </component>
 </project>
