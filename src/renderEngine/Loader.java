@@ -9,10 +9,11 @@ import org.lwjgl.opengl.GL30;
 import org.newdawn.slick.opengl.Texture;
 import org.newdawn.slick.opengl.TextureLoader;
 
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.nio.FloatBuffer;
 import java.nio.IntBuffer;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,18 +30,19 @@ public class Loader {
 
 
 	// make a new vao for a 3d model
-	public RawModel loadToVAO(float[] positions, int[] incises){
+	public RawModel loadToVAO(float[] positions,float[] textureCoords,int[] incises){
 		int vaoID = createVAO();// create the VAO and bind it
 		bindIndicesBuffer(incises);
-		storeDataInAttributeList(0, positions);// store the data inside the VAO
+		storeDataInAttributeList(0, 3,  positions);// store position data in vao
+		storeDataInAttributeList(1,2,textureCoords);// store UV data in VAO
 		unbindVAO();// unbind it, we are done with the VAO
 		return new RawModel(vaoID, incises.length);// make the new RawModel using our brand new VAO
 	}
 
 	public int loadTexture(String fileName){
-		Texture texture = null;
+		Texture texture;
 		try {
-			texture = TextureLoader.getTexture("PNG", new FileInputStream("res/"+fileName+".png"));
+			texture = TextureLoader.getTexture("PNG", Files.newInputStream(Paths.get("res/" + fileName + ".png")));
 		} catch (IOException e) {
 			throw new RuntimeException(e);
 		}
@@ -72,7 +74,7 @@ public class Loader {
 	}
 
 	// create the VBO, so it can be later added to the VAO
-	private void storeDataInAttributeList(int attributeNumber, float[] data){
+	private void storeDataInAttributeList(int attributeNumber,int coordinateSize, float[] data){
 		int vboID = GL15.glGenBuffers();// generate the VBO ID
 		vbos.add(vboID);// add the VBO ID to the VBO list
 
@@ -80,7 +82,7 @@ public class Loader {
 		GL15.glBindBuffer(GL15.GL_ARRAY_BUFFER, vboID);// tell openGL to use this buffer with its ID
 		FloatBuffer buffer = storeDataInFloatBuffer(data); // make the data into a buffer
 		GL15.glBufferData(GL15.GL_ARRAY_BUFFER, buffer, GL15.GL_STATIC_DRAW);// but that buffer into the VBO
-		GL20.glVertexAttribPointer(attributeNumber, 3, GL11.GL_FLOAT, false, 0,0);// tell openGL where everything is
+		GL20.glVertexAttribPointer(attributeNumber, coordinateSize, GL11.GL_FLOAT, false, 0,0);// tell openGL where everything is
 		GL15.glBindBuffer(GL15.GL_ARRAY_BUFFER, 0);// and unbind the VBO because we are done with it
 	}
 
