@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9517b87e-bcaf-42e3-8713-9a96771c58f1" name="Changes" comment="make the load shader method">
+    <list default="true" id="9517b87e-bcaf-42e3-8713-9a96771c58f1" name="Changes" comment="make the shaders do their magic  and make a gay rectangle">
       <change afterPath="$PROJECT_DIR$/src/shaders/StaticShader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/shaders/ShaderProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/shaders/ShaderProgram.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -212,6 +213,7 @@
     <MESSAGE value="create an index buffer VBO for more efficiant rendering" />
     <MESSAGE value="create vertex and fragment shaders" />
     <MESSAGE value="make the load shader method" />
-    <option name="LAST_COMMIT_MESSAGE" value="make the load shader method" />
+    <MESSAGE value="make the shaders do their magic  and make a gay rectangle" />
+    <option name="LAST_COMMIT_MESSAGE" value="make the shaders do their magic  and make a gay rectangle" />
   </component>
 </project>
