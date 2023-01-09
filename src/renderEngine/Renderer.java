@@ -22,8 +22,8 @@ public class Renderer {
 		GL20.glEnableVertexAttribArray(0);// we enable the vertex attrib array because it's time to read motherfucker!
 
 		GL20.glEnableVertexAttribArray(1);// enable the texture attrib array
-		GL13.glActiveTexture(GL13.GL_TEXTURE0);
-		GL11.glBindTexture(GL11.GL_TEXTURE_2D, texturedModel.getTexture().getID());
+		GL13.glActiveTexture(GL13.GL_TEXTURE0);// set the active te GL_TEXTURE0, otherwise known as the texture that the shader will pick up
+		GL11.glBindTexture(GL11.GL_TEXTURE_2D, texturedModel.getTexture().getID());// bind the texture to the model
 
 		GL11.glDrawElements(GL11.GL_TRIANGLES, model.getVertexCount(), GL11.GL_UNSIGNED_INT, 0);
 		GL20.glDisableVertexAttribArray(0);// we are done, disable the attrib list

@@ -1,11 +1,12 @@
 <component name="ArtifactManager">
-  <artifact type="jar" name="screaming-internally:jar">
+  <artifact type="jar" build-on-make="true" name="screaming-internally:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/screaming_internally_jar</output-path>
     <root id="archive" name="screaming-internally.jar">
       <element id="module-output" name="screaming-internally" />
       <element id="extracted-dir" path="$PROJECT_DIR$/lib/jar/lwjgl.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/lib/jar/lwjgl_util.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/lib/jar/slick-util.jar" path-in-jar="/" />
+      <element id="library" level="project" name="lwjgl" />
     </root>
   </artifact>
 </component>

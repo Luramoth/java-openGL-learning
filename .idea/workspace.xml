@@ -9,11 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9517b87e-bcaf-42e3-8713-9a96771c58f1" name="Changes" comment="make it so the program is texture-ready">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/screaming_internally_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
+    <list default="true" id="9517b87e-bcaf-42e3-8713-9a96771c58f1" name="Changes" comment="fix error where texture just wouldent load">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/testgame/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/renderEngine/Renderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderEngine/Renderer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shaders/fragmentShader.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/src/shaders/fragmentShader.glsl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shaders/vertexShader.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/src/shaders/vertexShader.glsl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -203,7 +203,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673243403297</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="fix error where texture just wouldent load">
+      <created>1673248556505</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1673248556505</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -253,6 +260,7 @@
     <MESSAGE value="workspace.xml moment" />
     <MESSAGE value="some texture stuff" />
     <MESSAGE value="make it so the program is texture-ready" />
-    <option name="LAST_COMMIT_MESSAGE" value="make it so the program is texture-ready" />
+    <MESSAGE value="fix error where texture just wouldent load" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix error where texture just wouldent load" />
   </component>
 </project>
