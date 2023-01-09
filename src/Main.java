@@ -3,6 +3,7 @@ import renderEngine.DisplayManger;
 import renderEngine.Loader;
 import renderEngine.RawModel;
 import renderEngine.Renderer;
+import shaders.StaticShader;
 
 public class Main {
 	public static void main(String[] args) {
@@ -12,6 +13,7 @@ public class Main {
 
 		Loader loader = new Loader();
 		Renderer renderer = new Renderer();
+		StaticShader shader = new StaticShader();
 
 		float[] vertices = {
 				-0.5f, 0.5f, 0f,//v0
@@ -31,10 +33,13 @@ public class Main {
 			renderer.prepare();
 			//game logic
 			//render!
+			shader.start();
 			renderer.render(model);
+			shader.stop();
 			DisplayManger.updateDisplay();
 		}
 
+		shader.cleanUP();;
 		loader.cleanUP();
 		DisplayManger.closeDisplay();
 	}

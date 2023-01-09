@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9517b87e-bcaf-42e3-8713-9a96771c58f1" name="Changes" comment="create vertex and fragment shaders">
-      <change afterPath="$PROJECT_DIR$/src/shaders/ShaderProgram.java" afterDir="false" />
+    <list default="true" id="9517b87e-bcaf-42e3-8713-9a96771c58f1" name="Changes" comment="make the load shader method">
+      <change afterPath="$PROJECT_DIR$/src/shaders/StaticShader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shaders/ShaderProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/shaders/ShaderProgram.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,7 +160,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673221495065</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="make the load shader method">
+      <created>1673222031872</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1673222031872</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -203,6 +211,7 @@
     <MESSAGE value="make soem comments for readability" />
     <MESSAGE value="create an index buffer VBO for more efficiant rendering" />
     <MESSAGE value="create vertex and fragment shaders" />
-    <option name="LAST_COMMIT_MESSAGE" value="create vertex and fragment shaders" />
+    <MESSAGE value="make the load shader method" />
+    <option name="LAST_COMMIT_MESSAGE" value="make the load shader method" />
   </component>
 </project>
