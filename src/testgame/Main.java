@@ -1,3 +1,5 @@
+package testgame;
+
 import models.TexturedModel;
 import org.lwjgl.opengl.Display;
 import renderEngine.DisplayManger;
