@@ -9,6 +9,7 @@ public class StaticShader extends ShaderProgram{
 		super(VERTEX_FILE, FRAGMENT_FILE);
 	}
 
+	// function to tell the shader what to set the inputs to
 	@Override
 	protected void bindAttributes() {
 		super.bindAttribute(0, "position");

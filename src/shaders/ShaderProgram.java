@@ -7,6 +7,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
+@SuppressWarnings({"FieldMayBeFinal", "unused"})
 public abstract class ShaderProgram {
 	private int programID;
 	private int vertexShaderID;
@@ -15,7 +16,7 @@ public abstract class ShaderProgram {
 	public ShaderProgram(String vertexFile, String fragmentFile){
 		vertexShaderID = loadShader(vertexFile, GL20.GL_VERTEX_SHADER);// load and compile the vertex shader
 		fragmentShaderID = loadShader(fragmentFile, GL20.GL_FRAGMENT_SHADER);// do the same for the fragment shader
-		programID = GL20.glCreateProgram();// create the program and return it's ID
+		programID = GL20.glCreateProgram();// create the program and return its ID
 
 		//attach both shaders to the program
 		GL20.glAttachShader(programID, vertexShaderID);
@@ -37,7 +38,7 @@ public abstract class ShaderProgram {
 	public void cleanUP(){
 		stop();// make sure no programs are currently running
 
-		// dettach shaders from their programs
+		// detach shaders from their programs
 		GL20.glDetachShader(programID, vertexShaderID);
 		GL20.glDetachShader(programID, fragmentShaderID);
 
@@ -48,6 +49,7 @@ public abstract class ShaderProgram {
 	}
 	protected  abstract  void bindAttributes();
 
+	@SuppressWarnings("SameParameterValue")
 	protected  void bindAttribute(int attribute, String variableName){
 		GL20.glBindAttribLocation(programID, attribute, variableName);
 	}

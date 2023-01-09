@@ -1,7 +1,7 @@
 import org.lwjgl.opengl.Display;
 import renderEngine.DisplayManger;
 import renderEngine.Loader;
-import renderEngine.RawModel;
+import models.RawModel;
 import renderEngine.Renderer;
 import shaders.StaticShader;
 
@@ -39,7 +39,7 @@ public class Main {
 			DisplayManger.updateDisplay();
 		}
 
-		shader.cleanUP();;
+		shader.cleanUP();
 		loader.cleanUP();
 		DisplayManger.closeDisplay();
 	}

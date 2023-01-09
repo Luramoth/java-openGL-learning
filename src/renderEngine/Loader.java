@@ -1,11 +1,16 @@
 package renderEngine;
 
+import models.RawModel;
 import org.lwjgl.BufferUtils;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL15;
 import org.lwjgl.opengl.GL20;
 import org.lwjgl.opengl.GL30;
+import org.newdawn.slick.opengl.Texture;
+import org.newdawn.slick.opengl.TextureLoader;
 
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.nio.FloatBuffer;
 import java.nio.IntBuffer;
 import java.util.ArrayList;
@@ -14,11 +19,13 @@ import java.util.List;
 // a bit of explanation so that I remember, a VAO is a list of VBO's and a VBO is a list of data that defines a model
 //an indices, or index buffer, is a buffer full of ints to specify which vertices connect to which vertices in a VBO
 
+@SuppressWarnings({"FieldMayBeFinal", "Convert2Diamond"})
 public class Loader {
 
 	// make a list of the Vao's and Vbo's, so they can later be completely annihilated
-	private List<Integer> vaos = new ArrayList<>();
+	private List<Integer> vaos = new ArrayList<Integer>();
 	private List<Integer> vbos = new ArrayList<Integer>();
+	private List<Integer> textures = new ArrayList<Integer>();
 
 
 	// make a new vao for a 3d model
@@ -30,6 +37,19 @@ public class Loader {
 		return new RawModel(vaoID, incises.length);// make the new RawModel using our brand new VAO
 	}
 
+	public int loadTexture(String fileName){
+		Texture texture = null;
+		try {
+			texture = TextureLoader.getTexture("PNG", new FileInputStream("res/"+fileName+".png"));
+		} catch (IOException e) {
+			throw new RuntimeException(e);
+		}
+
+		int textureID = texture.getTextureID();
+		textures.add(textureID);
+		return textureID;
+	}
+
 	// loop through the vao's and vbo's and delete them
 	public void cleanUP(){
 		for (int vao:vaos){
@@ -37,6 +57,9 @@ public class Loader {
 		}
 		for (int vbo:vbos){
 			GL15.glDeleteBuffers(vbo);
+		}
+		for (int texture:textures){
+			GL11.glDeleteTextures(texture);
 		}
 	}
 
