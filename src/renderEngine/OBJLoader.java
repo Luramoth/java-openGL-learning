@@ -31,14 +31,14 @@ public class OBJLoader {
 		// map texture coords so they are unique
 		//obj = ObjUtils.makeTexCoordsUnique(obj);
 
+		obj = ObjUtils.convertToRenderable(obj);
+
 		int[] faceVertexIndices = ObjData.getFaceVertexIndicesArray(obj);
 
 		// index vertices, normals, and texture coordinates
 		float vertices[] = ObjData.getVerticesArray(obj);
 		float texCoords[] = ObjData.getTexCoordsArray(obj, 2);
 		float normals[] = ObjData.getNormalsArray(obj);
-
-		obj = ObjUtils.convertToRenderable(obj);
 
 		// Obtain the data from the OBJ, as direct buffers:
 		//FloatBuffer vertices = ObjData.getVertices(obj);
@@ -48,8 +48,6 @@ public class OBJLoader {
 		System.out.println("UVs:");
 		System.out.println(createString(texCoords, 2));
 
-		System.out.println("Indices:");
-		System.out.println(faceVertexIndices);
 
 		return loader.loadToVAO(vertices, texCoords, faceVertexIndices);
 	}
