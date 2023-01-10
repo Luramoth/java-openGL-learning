@@ -9,12 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9517b87e-bcaf-42e3-8713-9a96771c58f1" name="Changes" comment="rename the logo file cause i dont wanna keep typing that out">
-      <change afterPath="$PROJECT_DIR$/src/toolbox/Maths.java" afterDir="false" />
+    <list default="true" id="9517b87e-bcaf-42e3-8713-9a96771c58f1" name="Changes" comment="Matrix maths time">
+      <change afterPath="$PROJECT_DIR$/src/Entities/Entity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shaders/ShaderProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/shaders/ShaderProgram.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shaders/StaticShader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/shaders/StaticShader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shaders/vertexShader.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/src/shaders/vertexShader.glsl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/renderEngine/Renderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderEngine/Renderer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/testgame/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/testgame/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -255,7 +254,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673318744254</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Matrix maths time">
+      <created>1673321327594</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1673321327594</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -309,6 +315,7 @@
     <MESSAGE value="make some comments" />
     <MESSAGE value="make it so wireframe view can be turned on/off by pressing 0" />
     <MESSAGE value="rename the logo file cause i dont wanna keep typing that out" />
-    <option name="LAST_COMMIT_MESSAGE" value="rename the logo file cause i dont wanna keep typing that out" />
+    <MESSAGE value="Matrix maths time" />
+    <option name="LAST_COMMIT_MESSAGE" value="Matrix maths time" />
   </component>
 </project>

@@ -1,9 +1,11 @@
 package testgame;
 
+import Entities.Entity;
 import models.TexturedModel;
 import org.lwjgl.input.Keyboard;
 import org.lwjgl.opengl.Display;
 import org.lwjgl.opengl.GL11;
+import org.lwjgl.util.vector.Vector3f;
 import renderEngine.DisplayManger;
 import renderEngine.Loader;
 import models.RawModel;
@@ -46,6 +48,8 @@ public class Main {
 		ModelTexture texture = new ModelTexture(loader.loadTexture("lura"));
 		TexturedModel texturedModel = new TexturedModel(model, texture);
 
+		Entity entity = new Entity(texturedModel, new Vector3f(-1,0,0),0f,0f,0f,1f);
+
 		GL11.glPolygonMode(GL11.GL_FRONT_AND_BACK, GL11.GL_FILL);
 
 		while (!Display.isCloseRequested()){
@@ -61,8 +65,11 @@ public class Main {
 			}
 
 			//render!
+			entity.increasePosition(0.002f, 0, 0);
+			entity.increaseRotation(0, 1, 0);
+
 			shader.start();
-			renderer.render(texturedModel);
+			renderer.render(entity, shader);
 			shader.stop();
 			DisplayManger.updateDisplay();
 		}
