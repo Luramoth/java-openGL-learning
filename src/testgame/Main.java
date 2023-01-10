@@ -1,5 +1,6 @@
 package testgame;
 
+import Entities.Camera;
 import Entities.Entity;
 import models.TexturedModel;
 import org.lwjgl.input.Keyboard;
@@ -50,6 +51,8 @@ public class Main {
 
 		Entity entity = new Entity(texturedModel, new Vector3f(0,0,-1),0f,0f,0f,1f);
 
+		Camera camera = new Camera();
+
 		GL11.glPolygonMode(GL11.GL_FRONT_AND_BACK, GL11.GL_FILL);
 
 		while (!Display.isCloseRequested()){
@@ -65,11 +68,17 @@ public class Main {
 			}
 
 			//render!
-			entity.increasePosition(0, 0, -0.1f);
-			entity.increaseRotation(100,100,100);
+			entity.increasePosition(0, 0, 0);
+			entity.increaseRotation(1,1,1);
+
+			camera.move();
 
 			shader.start();
+
+			shader.loadViewMatrix(camera);
 			renderer.render(entity, shader);
+
+
 			shader.stop();
 			DisplayManger.updateDisplay();
 		}
