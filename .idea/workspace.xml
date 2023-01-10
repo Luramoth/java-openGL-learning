@@ -9,13 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9517b87e-bcaf-42e3-8713-9a96771c58f1" name="Changes" comment="fix rotation bug and go WHEEEEEEEEEEEEEEEE">
-      <change afterPath="$PROJECT_DIR$/src/Entities/Camera.java" afterDir="false" />
+    <list default="true" id="9517b87e-bcaf-42e3-8713-9a96771c58f1" name="Changes" comment="make camera stuffs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shaders/StaticShader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/shaders/StaticShader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shaders/vertexShader.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/src/shaders/vertexShader.glsl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/renderEngine/Renderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderEngine/Renderer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/testgame/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/testgame/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/toolbox/Maths.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/toolbox/Maths.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -284,7 +281,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673326380409</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="make camera stuffs">
+      <created>1673328025192</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1673328025192</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -316,7 +320,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="add lwjgl files" />
     <MESSAGE value="initialise display" />
     <MESSAGE value="destroy display" />
     <MESSAGE value="add native libraries" />
@@ -341,6 +344,7 @@
     <MESSAGE value="make entity class and make luragen go wheeeeeee" />
     <MESSAGE value="time to put things into perspective" />
     <MESSAGE value="fix rotation bug and go WHEEEEEEEEEEEEEEEE" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix rotation bug and go WHEEEEEEEEEEEEEEEE" />
+    <MESSAGE value="make camera stuffs" />
+    <option name="LAST_COMMIT_MESSAGE" value="make camera stuffs" />
   </component>
 </project>
