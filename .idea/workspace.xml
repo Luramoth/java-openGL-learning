@@ -9,11 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9517b87e-bcaf-42e3-8713-9a96771c58f1" name="Changes" comment="make entity class and make luragen go wheeeeeee">
+    <list default="true" id="9517b87e-bcaf-42e3-8713-9a96771c58f1" name="Changes" comment="time to put things into perspective">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/renderEngine/Renderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderEngine/Renderer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shaders/StaticShader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/shaders/StaticShader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shaders/vertexShader.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/src/shaders/vertexShader.glsl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/testgame/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/testgame/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -269,7 +267,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673323482214</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="time to put things into perspective">
+      <created>1673324778201</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1673324778201</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -325,6 +330,7 @@
     <MESSAGE value="rename the logo file cause i dont wanna keep typing that out" />
     <MESSAGE value="Matrix maths time" />
     <MESSAGE value="make entity class and make luragen go wheeeeeee" />
-    <option name="LAST_COMMIT_MESSAGE" value="make entity class and make luragen go wheeeeeee" />
+    <MESSAGE value="time to put things into perspective" />
+    <option name="LAST_COMMIT_MESSAGE" value="time to put things into perspective" />
   </component>
 </project>

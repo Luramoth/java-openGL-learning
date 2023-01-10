@@ -38,7 +38,7 @@ public class Renderer {
 		GL20.glEnableVertexAttribArray(0);// we enable the vertex attrib array because it's time to read motherfucker!
 		GL20.glEnableVertexAttribArray(1);// enable the texture attrib array
 
-		Matrix4f transformationMatrix = Maths.createTransformationMatrix(entity.getPosition(), entity.getRotX(), entity.getRotY(), entity.getRotY(), entity.getScale());
+		Matrix4f transformationMatrix = Maths.createTransformationMatrix(entity.getPosition(), entity.getRotX(), entity.getRotY(), entity.getRotZ(), entity.getScale());
 
 		shader.loadTransformationMatrix(transformationMatrix);
 

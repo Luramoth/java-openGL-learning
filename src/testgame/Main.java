@@ -66,6 +66,7 @@ public class Main {
 
 			//render!
 			entity.increasePosition(0, 0, -0.1f);
+			entity.increaseRotation(100,100,100);
 
 			shader.start();
 			renderer.render(entity, shader);
