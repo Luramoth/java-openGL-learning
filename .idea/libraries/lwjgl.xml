@@ -4,6 +4,7 @@
       <root url="jar://$PROJECT_DIR$/lib/jar/lwjgl.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/jar/lwjgl_util.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/jar/slick-util.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jar/obj-0.3.0.jar!/" />
     </CLASSES>
     <JAVADOC />
     <NATIVE>
