@@ -5,7 +5,9 @@ in vec2 textureCoords;// texture UV's for the model
 
 out vec2 pass_textureCoords;// output to pass streight to the fragment shader
 
+uniform mat4 transformationMatrix;
+
 void main(void){
-    gl_Position = vec4(position.xyz,1.0);// converty the current vertex positions to a 4D coordinate
+    gl_Position = transformationMatrix * vec4(position.xyz,1.0);// converty the current vertex positions to a 4D coordinate
     pass_textureCoords = textureCoords;// immidiately pass the UV coordinates to the fragment shader as we cant really use them
 }
