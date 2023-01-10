@@ -1,7 +1,9 @@
 package testgame;
 
 import models.TexturedModel;
+import org.lwjgl.input.Keyboard;
 import org.lwjgl.opengl.Display;
+import org.lwjgl.opengl.GL11;
 import renderEngine.DisplayManger;
 import renderEngine.Loader;
 import models.RawModel;
@@ -12,6 +14,8 @@ import textures.ModelTexture;
 public class Main {
 	public static void main(String[] args) {
 		System.out.println("Hello world!");
+
+		boolean wireframe;
 
 		DisplayManger.createDisplay();
 
@@ -42,9 +46,20 @@ public class Main {
 		ModelTexture texture = new ModelTexture(loader.loadTexture("lura"));
 		TexturedModel texturedModel = new TexturedModel(model, texture);
 
+		GL11.glPolygonMode(GL11.GL_FRONT_AND_BACK, GL11.GL_FILL);
+
 		while (!Display.isCloseRequested()){
 			renderer.prepare();
 			//game logic
+
+			wireframe = Keyboard.isKeyDown(Keyboard.KEY_0);
+
+			if (wireframe){
+				GL11.glPolygonMode(GL11.GL_FRONT_AND_BACK, GL11.GL_LINE);
+			}else {
+				GL11.glPolygonMode(GL11.GL_FRONT_AND_BACK, GL11.GL_FILL);
+			}
+
 			//render!
 			shader.start();
 			renderer.render(texturedModel);
