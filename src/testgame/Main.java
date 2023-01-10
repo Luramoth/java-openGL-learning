@@ -22,8 +22,8 @@ public class Main {
 		DisplayManger.createDisplay();
 
 		Loader loader = new Loader();
-		Renderer renderer = new Renderer();
 		StaticShader shader = new StaticShader();
+		Renderer renderer = new Renderer(shader);
 
 		float[] vertices = {
 				-0.5f, 0.5f, 0f,	//v0
@@ -48,7 +48,7 @@ public class Main {
 		ModelTexture texture = new ModelTexture(loader.loadTexture("lura"));
 		TexturedModel texturedModel = new TexturedModel(model, texture);
 
-		Entity entity = new Entity(texturedModel, new Vector3f(-1,0,0),0f,0f,0f,1f);
+		Entity entity = new Entity(texturedModel, new Vector3f(0,0,-1),0f,0f,0f,1f);
 
 		GL11.glPolygonMode(GL11.GL_FRONT_AND_BACK, GL11.GL_FILL);
 
@@ -65,8 +65,7 @@ public class Main {
 			}
 
 			//render!
-			entity.increasePosition(0.002f, 0, 0);
-			entity.increaseRotation(0, 1, 0);
+			entity.increasePosition(0, 0, -0.1f);
 
 			shader.start();
 			renderer.render(entity, shader);

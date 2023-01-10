@@ -3,15 +3,26 @@ package renderEngine;
 import Entities.Entity;
 import models.RawModel;
 import models.TexturedModel;
-import org.lwjgl.opengl.GL11;
-import org.lwjgl.opengl.GL13;
-import org.lwjgl.opengl.GL20;
-import org.lwjgl.opengl.GL30;
+import org.lwjgl.opengl.*;
 import org.lwjgl.util.vector.Matrix4f;
 import shaders.StaticShader;
 import toolbox.Maths;
 
 public class Renderer {
+
+	private static final float FOV = 70;
+	private static final float NEAR_PLANE = 0.1f;
+	private static final float FAR_PLANE = 1000;
+
+	private Matrix4f projectionMatrix;
+
+	public Renderer(StaticShader shader) {
+		createProjectionMatrix();
+
+		shader.start();
+		shader.loadProjectionMatrix(projectionMatrix);
+		shader.stop();
+	}
 
 	// prepare the frame by clearing it first with a refreshing aggressive magenta!
 	public void prepare(){
@@ -40,5 +51,20 @@ public class Renderer {
 		GL20.glDisableVertexAttribArray(0);// we are done, disable the attrib list
 		GL20.glDisableVertexAttribArray(1);// done with texture coords as well, disable it
 		GL30.glBindVertexArray(0);// unbind the VAO because we are once again done using it
+	}
+
+	private void createProjectionMatrix(){
+		float aspectRatio = (float) Display.getWidth() / (float) Display.getHeight();
+		float y_scale = (float) ((1f / Math.tan(Math.toRadians(FOV/2f))) * aspectRatio);
+		float x_scale = y_scale / aspectRatio;
+		float frustum_length = FAR_PLANE - NEAR_PLANE;
+
+		projectionMatrix = new Matrix4f();
+		projectionMatrix.m00 = x_scale;
+		projectionMatrix.m11 = y_scale;
+		projectionMatrix.m22 = -((FAR_PLANE + NEAR_PLANE) / frustum_length);
+		projectionMatrix.m23 = -1;
+		projectionMatrix.m32 = -((2 * NEAR_PLANE * FAR_PLANE) / frustum_length);
+		projectionMatrix.m33 = 0;
 	}
 }
