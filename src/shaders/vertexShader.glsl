@@ -9,6 +9,8 @@ uniform mat4 transformationMatrix;
 uniform mat4 projectionMatrix;
 uniform mat4 viewMatrix;
 
+uniform vec3 lightPosition;
+
 void main(void){
     gl_Position = projectionMatrix * viewMatrix * transformationMatrix * vec4(position.xyz,1.0);// converty the current vertex positions to a 4D coordinate
     pass_textureCoords = textureCoords;// immidiately pass the UV coordinates to the fragment shader as we cant really use them

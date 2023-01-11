@@ -6,6 +6,8 @@ out vec4 out_color;// output color
 
 uniform sampler2D textureSampler;// take GL_TEXTURE0 and use it as the texture we are currently trying to render
 
+uniform vec3 lightColor;
+
 void main(void){
     out_color = texture(textureSampler, pass_textureCoords);// output the color as the texture
 }

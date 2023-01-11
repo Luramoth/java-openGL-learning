@@ -9,10 +9,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9517b87e-bcaf-42e3-8713-9a96771c58f1" name="Changes" comment="make it do UV coordinates are flipped on the y axis">
+    <list default="true" id="9517b87e-bcaf-42e3-8713-9a96771c58f1" name="Changes" comment="rotate">
+      <change afterPath="$PROJECT_DIR$/hs_err_pid2191.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hs_err_pid2426.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hs_err_pid28040.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/teapot.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/res/white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entities/Light.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entities/Camera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Camera.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/renderEngine/OBJLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderEngine/OBJLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shaders/StaticShader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/shaders/StaticShader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shaders/fragmentShader.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/src/shaders/fragmentShader.glsl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shaders/vertexShader.glsl" beforeDir="false" afterPath="$PROJECT_DIR$/src/shaders/vertexShader.glsl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/testgame/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/testgame/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -317,7 +324,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673404627726</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="rotate">
+      <created>1673407961105</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1673407961105</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -349,7 +363,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="add a title" />
     <MESSAGE value="make the RawModel class" />
     <MESSAGE value="make the Loader class" />
     <MESSAGE value="make the renderer" />
@@ -374,6 +387,7 @@
     <MESSAGE value="make faulty OBJ loader" />
     <MESSAGE value="fix faulty OBJ loader" />
     <MESSAGE value="make it do UV coordinates are flipped on the y axis" />
-    <option name="LAST_COMMIT_MESSAGE" value="make it do UV coordinates are flipped on the y axis" />
+    <MESSAGE value="rotate" />
+    <option name="LAST_COMMIT_MESSAGE" value="rotate" />
   </component>
 </project>
