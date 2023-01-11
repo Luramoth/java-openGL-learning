@@ -30,11 +30,11 @@ public class Main {
 
 		RawModel model = null;
 		try {
-			model = OBJLoader.loadOBJ("monkeytest", loader);
+			model = OBJLoader.loadOBJ("stall", loader);
 		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}
-		ModelTexture texture = new ModelTexture(loader.loadTexture("colorGrid"));
+		ModelTexture texture = new ModelTexture(loader.loadTexture("stallTex"));
 		TexturedModel texturedModel = new TexturedModel(model, texture);
 
 		Entity entity = new Entity(texturedModel, new Vector3f(0,0,-50),0f,0f,0f,1f);

@@ -9,8 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9517b87e-bcaf-42e3-8713-9a96771c58f1" name="Changes" comment="make faulty OBJ loader">
+    <list default="true" id="9517b87e-bcaf-42e3-8713-9a96771c58f1" name="Changes" comment="fix faulty OBJ loader">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/stallTex.png" beforeDir="false" afterPath="$PROJECT_DIR$/res/stallTex.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/renderEngine/OBJLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderEngine/OBJLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/testgame/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/testgame/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -300,7 +303,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673340948984</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="fix faulty OBJ loader">
+      <created>1673387150704</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1673387150704</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -332,7 +342,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="add native libraries" />
     <MESSAGE value="open a dang window" />
     <MESSAGE value="add a title" />
     <MESSAGE value="make the RawModel class" />
@@ -357,6 +366,7 @@
     <MESSAGE value="make camera stuffs" />
     <MESSAGE value="create Lura cube" />
     <MESSAGE value="make faulty OBJ loader" />
-    <option name="LAST_COMMIT_MESSAGE" value="make faulty OBJ loader" />
+    <MESSAGE value="fix faulty OBJ loader" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix faulty OBJ loader" />
   </component>
 </project>
