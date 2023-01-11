@@ -2,6 +2,7 @@ package testgame;
 
 import Entities.Camera;
 import Entities.Entity;
+import Entities.Light;
 import models.TexturedModel;
 import org.lwjgl.input.Keyboard;
 import org.lwjgl.opengl.Display;
@@ -30,7 +31,7 @@ public class Main {
 
 		RawModel model = null;
 		try {
-			model = OBJLoader.loadOBJ("teapot", loader);
+			model = OBJLoader.loadOBJ("dragon", loader);
 		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}
@@ -38,6 +39,8 @@ public class Main {
 		TexturedModel texturedModel = new TexturedModel(model, texture);
 
 		Entity entity = new Entity(texturedModel, new Vector3f(0,0,-50),0f,0f,0f,1f);
+
+		Light light = new Light(new Vector3f(20,20,-20), new Vector3f(1,1,1));
 
 		Camera camera = new Camera();
 
@@ -64,6 +67,8 @@ public class Main {
 			shader.start();
 
 			shader.loadViewMatrix(camera);
+			shader.loadLight(light);
+
 			renderer.render(entity, shader);
 
 

@@ -30,11 +30,12 @@ public class Loader {
 
 
 	// make a new vao for a 3d model
-	public RawModel loadToVAO(float[] positions,float[] textureCoords,int[] incises){
+	public RawModel loadToVAO(float[] positions,float[] textureCoords,float[] normals,int[] incises){
 		int vaoID = createVAO();// create the VAO and bind it
 		bindIndicesBuffer(incises);
 		storeDataInAttributeList(0, 3,  positions);// store position data in vao
 		storeDataInAttributeList(1,2,textureCoords);// store UV data in VAO
+		storeDataInAttributeList(2,3, normals);
 		unbindVAO();// unbind it, we are done with the VAO
 		return new RawModel(vaoID, incises.length);// make the new RawModel using our brand new VAO
 	}

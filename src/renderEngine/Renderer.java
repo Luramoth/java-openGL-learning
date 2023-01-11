@@ -38,6 +38,7 @@ public class Renderer {
 		GL30.glBindVertexArray(rawModel.getVaoID());// grab the VAO ID and bind it because we want to do something with it
 		GL20.glEnableVertexAttribArray(0);// we enable the vertex attrib array because it's time to read motherfucker!
 		GL20.glEnableVertexAttribArray(1);// enable the texture attrib array
+		GL20.glEnableVertexAttribArray(2);// enable normal attrib array
 
 		Matrix4f transformationMatrix = Maths.createTransformationMatrix(entity.getPosition(), entity.getRotX(), entity.getRotY(), entity.getRotZ(), entity.getScale());
 
@@ -51,6 +52,7 @@ public class Renderer {
 
 		GL20.glDisableVertexAttribArray(0);// we are done, disable the attrib list
 		GL20.glDisableVertexAttribArray(1);// done with texture coords as well, disable it
+		GL20.glDisableVertexAttribArray(2);// and normals, we don't need normals where we're going
 		GL30.glBindVertexArray(0);// unbind the VAO because we are once again done using it
 	}
 

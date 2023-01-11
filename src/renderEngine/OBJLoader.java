@@ -44,6 +44,6 @@ public class OBJLoader {
 			texCoords[i] = 1 - texCoords[i];
 		}
 
-		return loader.loadToVAO(vertices, texCoords, faceVertexIndices);
+		return loader.loadToVAO(vertices, texCoords, normals, faceVertexIndices);
 	}
 }
