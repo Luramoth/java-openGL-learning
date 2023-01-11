@@ -29,11 +29,11 @@ public class Camera {
 			position.x += SPEED;
 		}
 
-		if (Keyboard.isKeyDown(Keyboard.KEY_LEFT)){
-			yaw -= ROT_SPEED;
+		if (Keyboard.isKeyDown(Keyboard.KEY_Q)){
+			position.y += SPEED;
 		}
-		if (Keyboard.isKeyDown(Keyboard.KEY_RIGHT)){
-			yaw += ROT_SPEED;
+		if (Keyboard.isKeyDown(Keyboard.KEY_E)){
+			position.y -= SPEED;
 		}
 	}
 

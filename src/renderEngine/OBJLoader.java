@@ -41,9 +41,7 @@ public class OBJLoader {
 
 		//flip UV coords on the Y axis BECAUSE THIS DANG LOADER DOESENT DO IT FOR YTIOYIROUTOJ NKMNDKSNGDKLSNLKFDSANKLJFLK
 		for (int i = 1; i < texCoords.length; i += 2){
-			System.out.println(texCoords[i]);
 			texCoords[i] = 1 - texCoords[i];
-			System.out.println(texCoords[i]);
 		}
 
 		return loader.loadToVAO(vertices, texCoords, faceVertexIndices);

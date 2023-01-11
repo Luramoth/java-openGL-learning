@@ -57,7 +57,7 @@ public class Main {
 
 			//render!
 			//entity.increasePosition(0, 0, 0);
-			//entity.increaseRotation(1,1,0);
+			entity.increaseRotation(0,1,0);
 
 			camera.move();
 
